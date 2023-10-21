@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Syne:wght@400;700&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -5,6 +7,137 @@
 }
 
 body {
+  font-family: "Syne", sans-serif;
   background-color: #000;
   color: #fff;
+}
+
+img {
+  display: block;
+}
+
+.landing {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+
+  &__sky {
+    background: linear-gradient(to top, #434343 0%, black 100%);
+    z-index: 1;
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 90%;
+
+    &__star {
+      display: block;
+      position: absolute;
+      top: 10px;
+      left: 10px;
+      border-radius: 50%;
+      width: 4px;
+      height: 4px;
+      background-color: #fff;
+    }
+  }
+
+  &__trees {
+    z-index: 2;
+    position: absolute;
+    width: 110%;
+    height: 50vh;
+    bottom: -2%;
+    left: -5%;
+    right: 0;
+
+    &__tree {
+      position: absolute;
+      bottom: 0;
+      min-height: 20vh;
+      height: 100vh;
+      object-fit: cover;
+      object-position: top;
+
+      &--1 {
+        filter: blur(4px);
+        z-index: 6;
+        height: 45vh;
+        width: 100%;
+        object-fit: cover;
+      }
+
+      &--2 {
+        z-index: 5;
+        max-height: 50vh;
+        filter: blur(2px);
+        min-width: 110vw;
+        bottom: 1%;
+      }
+    }
+
+    &__mountain {
+      object-fit: cover;
+      position: absolute;
+      bottom: 10vh;
+      left: 50%;
+      transform: translateX(-50%);
+      min-width: 40vw;
+      max-height: 60vh;
+    }
+  }
+
+  &__floor {
+    z-index: 3;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #000;
+    height: 0%;
+  }
+}
+
+.section {
+  max-width: 1000px;
+  margin: 0 auto 10rem;
+  padding: 0 24px;
+
+  h1,
+  h2 {
+    font-weight: 700;
+  }
+
+  h1 {
+    font-size: 3rem;
+
+    @media (max-width: 40em) {
+      font-size: 2rem;
+    }
+  }
+
+  h2 {
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+
+    @media (max-width: 40em) {
+      font-size: 1.5rem;
+    }
+  }
+
+  p {
+    font-size: 1.2rem;
+
+    @media (max-width: 40em) {
+      font-size: 1rem;
+    }
+
+    span,
+    a {
+      text-transform: uppercase;
+      text-decoration: none;
+      font-weight: 700;
+      color: #ed5e93;
+    }
+  }
 }
