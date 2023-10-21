@@ -71,7 +71,6 @@ function App() {
         sky.current,
         {
           filter: "blur(2px)",
-          background: "linear-gradient(to top, #434343 -50%, black 100%)",
         },
         "-=1"
       );

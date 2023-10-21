@@ -103,6 +103,10 @@ img {
   margin: 0 auto 10rem;
   padding: 0 24px;
 
+  @media (min-width: 40em) {
+      padding-top: 5rem;
+    }
+
   h1,
   h2 {
     font-weight: 700;
